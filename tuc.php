@@ -1,0 +1,2 @@
+<?php
+print preg_replace('|[^0-9\.]|', '', shell_exec( 'curl https://www.mpeso.net/datos/consulta.php --data "_funcion=1&_captcha=123456&_terminal='.preg_replace('|[^0-9]|', '', $_GET['num']).'&_codigo=123456"' ));
